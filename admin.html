@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - Style Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-container">
+    <h1>Style Store Admin Panel</h1>
+    <p class="admin-subtitle">Manage your online store chatbot products</p>
+
+    <div class="admin-card">
+      <h2>Add New Product</h2>
+
+      <input type="text" id="productName" placeholder="Product Name e.g. fancy dress">
+      <input type="text" id="productPrice" placeholder="Price e.g. Rs. 2500">
+      <input type="text" id="productSizes" placeholder="Sizes e.g. Small, Medium, Large">
+      <input type="text" id="productColors" placeholder="Colors e.g. Red, Black">
+      <input type="text" id="productCategory" placeholder="Category e.g. Party Wear">
+
+      <label class="image-label">Select Product Image from Laptop/Mobile</label>
+      <input type="file" id="productImage" accept="image/*">
+      <p class="image-help">Image is optional. You can add product without image too.</p>
+      <img id="imagePreview" class="image-preview" style="display:none;">
+
+      <button type="button" onclick="addAdminProduct()">Add Product</button>
+    </div>
+
+    <div class="admin-card">
+      <h2>Product List</h2>
+      <div id="adminProductList"></div>
+    </div>
+
+    <div class="admin-card">
+      <h2>Customer Orders</h2>
+      <div id="adminOrderList"></div>
+    </div>
+
+    <a href="index.html" class="back-link">Back to Chatbot</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

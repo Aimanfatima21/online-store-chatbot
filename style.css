@@ -1,0 +1,483 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main chatbot card */
+.chat-container {
+  width: 370px;
+  height: 520px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+}
+
+/* Header */
+.chat-header {
+  background: #111827;
+  color: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.store-logo {
+  width: 40px;
+  height: 40px;
+  background: #facc15;
+  color: #111827;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 23px;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.chat-header p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #d1d5db;
+}
+
+/* Chat area */
+.chat-body {
+  flex: 1;
+  background: #f9fafb;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+/* Message bubbles */
+.message {
+  max-width: 82%;
+  padding: 11px 14px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.bot-message {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-bottom-left-radius: 5px;
+}
+
+.user-message {
+  background: #111827;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  gap: 10px;
+}
+
+.chat-footer input {
+   flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 30px;
+  outline: none;
+  font-size: 14px;
+  background: #f9fafb;
+}
+
+.chat-footer input:focus {
+  border-color: #111827;
+  background: white;
+}
+
+.chat-footer button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.chat-footer button:hover {
+  background: #374151;
+}
+
+/* WhatsApp order button */
+.whatsapp-button {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 5px 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.whatsapp-button:hover {
+  background: #16a34a;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .chat-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+.quick-replies {
+  display: flex;
+  gap: 7px;
+  padding: 8px 10px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+.quick-replies button {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #111827;
+  padding: 7px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.quick-replies button:hover {
+  background: #111827;
+  color: white;
+}
+.product-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 12px;
+  margin-bottom: 12px;
+  max-width: 88%;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #111827;
+  text-transform: capitalize;
+}
+
+.product-card .category {
+  margin: 3px 0 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #374151;
+}
+
+.product-card button {
+  margin-top: 10px;
+  width: 100%;
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 10px 13px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.product-card button:hover {
+  background: #374151;
+}
+
+.product-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #111827;
+  text-transform: capitalize;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #374151;
+}
+
+.product-card button {
+  margin-top: 10px;
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 9px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.product-card button:hover {
+  background: #374151;
+}
+/* Admin Panel */
+.admin-body {
+  background: #f3f4f6;
+  display: block;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.admin-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.admin-container h1 {
+  margin-bottom: 5px;
+  color: #111827;
+}
+
+.admin-subtitle {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.admin-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.admin-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+.admin-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+}
+
+.admin-card input:focus {
+  border-color: #111827;
+}
+
+.admin-card button {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-card button:hover {
+  background: #374151;
+}
+
+.admin-product-item {
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-product-item h3 {
+  margin: 0 0 6px;
+  text-transform: capitalize;
+}
+
+.admin-product-item p {
+  margin: 4px 0;
+  color: #374151;
+  font-size: 14px;
+}
+
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.image-preview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.image-label {
+  display: block;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.image-help {
+  margin: -4px 0 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.admin-card input[type="file"] {
+  background: #f9fafb;
+  cursor: pointer;
+}
+.delete-btn {
+  background: #dc2626 !important;
+  color: white;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background: #b91c1c !important;
+}
+.edit-btn {
+  background: #2563eb !important;
+  color: white;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8 !important;
+}
+.inline-edit-box {
+  margin-top: 14px;
+  padding: 14px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.inline-edit-box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.inline-edit-box input:focus {
+  border-color: #111827;
+}
+
+.save-btn {
+  background: #16a34a !important;
+  color: white;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.save-btn:hover {
+  background: #15803d !important;
+}
+
+.cancel-btn {
+  background: #6b7280 !important;
+  color: white;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #4b5563 !important;
+}
+.out-stock-btn {
+  background: #9ca3af !important;
+  color: white;
+  cursor: not-allowed !important;
+}
+.admin-order-item {
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-order-item h3 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.admin-order-item p {
+  margin: 4px 0;
+  color: #374151;
+  font-size: 14px;
+}

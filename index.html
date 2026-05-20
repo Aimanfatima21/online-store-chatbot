@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Store Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="chat-container">
+
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="store-logo">S</div>
+      <div>
+        <h2>Style Store Assistant</h2>
+        <p>Online support for products & orders</p>
+      </div>
+    </div>
+
+    <!-- Chat Messages Area -->
+    <div class="chat-body" id="chatBody">
+      <div class="message bot-message">
+        Hi! Welcome to Style Store. Ask me about products, prices, delivery, COD, return policy, or placing an order.
+      </div>
+    </div>
+
+    <!-- Fixed Quick Reply Buttons -->
+    <div class="quick-replies">
+      <button onclick="quickReply('products')">Products</button>
+      <button onclick="quickReply('delivery')">Delivery</button>
+      <button onclick="quickReply('cod')">COD</button>
+      <button onclick="quickReply('return')">Return</button>
+      <button onclick="quickReply('order')">Order</button>
+    </div>
+
+    <!-- Message Input Area -->
+    <div class="chat-footer">
+      <input type="text" id="userInput" placeholder="Write your message...">
+      <button onclick="sendMessage()">➤</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
