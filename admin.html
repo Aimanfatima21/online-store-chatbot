@@ -6,9 +6,31 @@
 </head>
 <body class="admin-body">
 
-  <div class="admin-container">
-    <h1>Style Store Admin Panel</h1>
-    <p class="admin-subtitle">Manage your online store chatbot products</p>
+  <!-- Login Box -->
+  <div class="login-container" id="loginBox">
+    <div class="login-card">
+      <h1>Admin Login</h1>
+      <p>Enter username and password to access admin panel</p>
+
+      <input type="text" id="adminUsername" placeholder="Username">
+      <input type="password" id="adminPassword" placeholder="Password">
+
+      <button type="button" onclick="adminLogin()">Login</button>
+
+      <p id="loginError" class="login-error"></p>
+    </div>
+  </div>
+
+  <!-- Admin Panel -->
+  <div class="admin-container" id="adminPanel" style="display:none;">
+    <div class="admin-top">
+      <div>
+        <h1>Style Store Admin Panel</h1>
+        <p class="admin-subtitle">Manage your online store chatbot products</p>
+      </div>
+
+      <button class="logout-btn" onclick="adminLogout()">Logout</button>
+    </div>
 
     <div class="admin-card">
       <h2>Add New Product</h2>
