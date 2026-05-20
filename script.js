@@ -773,3 +773,42 @@ function deleteOrder(index) {
 
 showAdminProducts();
 showAdminOrders();
+
+// Simple Admin Login
+function adminLogin() {
+  const username = document.getElementById("adminUsername").value.trim();
+  const password = document.getElementById("adminPassword").value.trim();
+  const loginError = document.getElementById("loginError");
+
+  if (username === "admin" && password === "12345") {
+    localStorage.setItem("adminLoggedIn", "true");
+    showAdminPanel();
+  } else {
+    loginError.innerText = "Invalid username or password.";
+  }
+}
+
+function showAdminPanel() {
+  const loginBox = document.getElementById("loginBox");
+  const adminPanel = document.getElementById("adminPanel");
+
+  if (!loginBox || !adminPanel) return;
+
+  if (localStorage.getItem("adminLoggedIn") === "true") {
+    loginBox.style.display = "none";
+    adminPanel.style.display = "block";
+    showAdminProducts();
+    showAdminOrders();
+  } else {
+    loginBox.style.display = "flex";
+    adminPanel.style.display = "none";
+  }
+}
+
+function adminLogout() {
+  localStorage.removeItem("adminLoggedIn");
+  showAdminPanel();
+}
+
+// Check login when admin page opens
+showAdminPanel();
